@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+*.Zone.Identifier
+package-lock.json
+test*.js
+*.tar.gz
+all-in-one.html
+check*.js
+verify*.js

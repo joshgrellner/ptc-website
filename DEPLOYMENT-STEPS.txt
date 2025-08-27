@@ -1,0 +1,102 @@
+SIMPLE DEPLOYMENT STEPS FOR PENLEY TRANSPORTATION WEBSITE
+=========================================================
+
+OPTION A: GITHUB PAGES (RECOMMENDED - FREE)
+--------------------------------------------
+
+1. CREATE GITHUB ACCOUNT
+   → Go to github.com
+   → Sign up for free account
+   → Verify your email
+
+2. CREATE NEW REPOSITORY
+   → Click + icon (top right) → New repository
+   → Name: penley-transportation
+   → Set to PUBLIC
+   → Click "Create repository"
+
+3. UPLOAD YOUR FILES
+   → Click "uploading an existing file"
+   → Select ALL these files from /root/penley-transportation/:
+     • index.html
+     • styles.css
+     • script.js
+     • Map.jpeg
+     • Truck-trailer.jpeg
+     • wellsite-operations.jpg
+     • wellsite.jpg
+     • PTC_Logo.png
+     • All other .jpg and .png files
+   → Click "Commit changes"
+
+4. ENABLE GITHUB PAGES
+   → Go to Settings → Pages
+   → Source: Deploy from branch
+   → Branch: main
+   → Folder: / (root)
+   → Save
+
+5. YOUR SITE IS LIVE!
+   → URL: https://[your-github-username].github.io/penley-transportation/
+   → Wait 5-10 minutes for initial deployment
+
+6. CONNECT YOUR DOMAIN (penleytransportation.com)
+   → In GitHub: Settings → Pages → Custom domain → Enter your domain
+   → In Squarespace: Add DNS records pointing to GitHub (see README for details)
+
+
+OPTION B: NETLIFY (ALSO FREE, EVEN EASIER)
+-------------------------------------------
+
+1. GO TO NETLIFY
+   → Visit netlify.com
+   → Sign up with GitHub account
+
+2. DRAG & DROP DEPLOYMENT
+   → From your computer, open /root/penley-transportation/ folder
+   → Drag the ENTIRE folder to Netlify's drop zone
+   → Site deploys instantly!
+
+3. CONNECT DOMAIN
+   → Click "Domain settings"
+   → Add custom domain
+   → Follow instructions to update DNS
+
+
+FILES YOU NEED TO UPLOAD:
+-------------------------
+✓ index.html (main file)
+✓ styles.css (styling)
+✓ script.js (interactions)
+✓ Map.jpeg (service area map)
+✓ Truck-trailer.jpeg (fleet image)
+✓ wellsite-operations.jpg (hero background)
+✓ wellsite.jpg (backup hero)
+✓ PTC_Logo.png (logo)
+✓ Any other image files you want to include
+
+
+DOMAIN SETUP FROM SQUARESPACE:
+-------------------------------
+1. Log into Squarespace
+2. Settings → Domains → [Your Domain] → DNS Settings
+3. Add A records for GitHub:
+   - 185.199.108.153
+   - 185.199.109.153
+   - 185.199.110.153
+   - 185.199.111.153
+4. Add CNAME record:
+   - www → [your-username].github.io
+
+
+NEED HELP?
+----------
+- GitHub Pages: https://pages.github.com
+- Netlify: https://docs.netlify.com
+- Video tutorial: Search "GitHub Pages custom domain" on YouTube
+
+
+QUICK TEST:
+-----------
+Your site is currently running locally at: http://localhost:8000
+Once deployed, it will be at: https://penleytransportation.com
