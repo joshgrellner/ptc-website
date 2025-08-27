@@ -69,17 +69,31 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Get form data
             const formData = new FormData(this);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
+            
+            // Submit to Formspree
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Thank you for your inquiry! We will contact you soon.\n\nFor immediate assistance, please call (405) 235-7553');
+                    this.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwnProperty.call(data, 'errors')) {
+                            alert('There was an error submitting your form. Please try again or call (405) 235-7553 directly.');
+                        } else {
+                            alert('Thank you for your inquiry! We will contact you soon.\n\nFor immediate assistance, please call (405) 235-7553');
+                            this.reset();
+                        }
+                    });
+                }
+            }).catch(error => {
+                alert('There was an error submitting your form. Please try again or call (405) 235-7553 directly.');
             });
-            
-            // Here you would normally send the data to a server
-            // For now, we'll just show an alert
-            alert('Thank you for your inquiry! We will contact you soon.\n\nFor immediate assistance, please call (405) 235-7553');
-            
-            // Reset form
-            this.reset();
         });
     }
     
