@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Block access to admin or private areas (if any in future)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all search engine bots to access sitemap
+Sitemap: https://penleytransportation.com/sitemap.xml
+
+# Specific crawl delays for major search engines
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 1
+
+User-agent: Slurp
+Crawl-delay: 1
